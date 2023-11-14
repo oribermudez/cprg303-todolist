@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {SafeAreaView, Button, StyleSheet} from 'react-native';
+import {SafeAreaView, Button} from 'react-native';
 import {useState} from 'react';
 
 import ToDoForm from '../components/ToDoForm';
@@ -21,19 +21,11 @@ const HomeScreen = ({navigation}) => {
         <ToDoForm onAdd={handleAdd} />
       </SafeAreaView>
       <Button
-        style={styles.button}
         title="Go to About"
         onPress={() => navigation.navigate('About')}
       />
     </MainLayout>
   );
 };
-
-const styles = StyleSheet.create({
-  button: {
-    marginTop: 20,
-    marginBottom: 20,
-  },
-});
 
 export default HomeScreen;
